@@ -1,11 +1,18 @@
+# Code Author: robertneville777
+# Code Date Creation: 9-17-2019
+# Code Date Revision: 9-17-2019
+
+# Text: Elementary Differential Equations
+# Author: Edwards and Penney
+# Edition: 5th
+# Section: 5.3
+# Problems: 1-30 (odd)
+
 import numpy as np
 import sec5_3_funcs as sec5_3_funcs
 import sympy as sym
 from sympy.matrices import Matrix
 from sympy import Symbol
-# from sympy import *
-# from sympy import init_session
-# init_session()
 
 # Problem 1
 A = np.array([[2,-3],[4,7]])
@@ -54,19 +61,13 @@ x2 = sym.exp(2*t)*Matrix([1,-1])
 sec5_3_funcs.verify_wronskian_dispsolution(P,x1,x2)
 
 print("Problem 23:")
-P  = Matrix([[4,2],[-3,-1]])
-x1 = sym.exp(t)*Matrix([2,-3])
-x2 = sym.exp(2*t)*Matrix([1,-1])
+P  = Matrix([[3,-1],[5,-3]])
+x1 = sym.exp(2*t)*Matrix([1,1])
+x2 = sym.exp(-2*t)*Matrix([1,5])
 sec5_3_funcs.verify_wronskian_dispsolution(P,x1,x2)
 
 print("Problem 25:")
 P  = Matrix([[4,-3],[6,-7]])
 x1 = sym.exp(2*t)*Matrix([3,2])
 x2 = sym.exp(-5*t)*Matrix([1,3])
-sec5_3_funcs.verify_wronskian_dispsolution(P,x1,x2)
-
-print("Problem 27:")
-P  = Matrix([[0,1,1],[1,0,1],[1,1,0]])
-x1 = sym.exp(2*t)*Matrix([1,1,1])
-x2 = sym.exp(-t)*Matrix([1,0,-1])
 sec5_3_funcs.verify_wronskian_dispsolution(P,x1,x2)

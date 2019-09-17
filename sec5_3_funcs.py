@@ -1,6 +1,6 @@
 # Code Author: robertneville777
 # Code Date Creation: 9-14-2019
-# Code Date Revision: 9-14-2019
+# Code Date Revision: 9-17-2019
 
 # Text: Elementary Differential Equations
 # Author: Edwards and Penney
@@ -39,13 +39,17 @@ def verify_wronskian_dispsolution(P, x1, x2):
     W = W.T
     W = W.det()
 
+    print('\n')
     print('Wronskian of x1 and x2:')
-    print(W)
+    sym.pprint(W)
+    print('\n')
 
     # Print general solution of system
     c1 = Symbol('c1')
     c2 = Symbol('c2')
 
     x = c1*x1 + c2*x2
+
+    print('x(t) = ')
     sym.pprint(x)
     print('\n')
